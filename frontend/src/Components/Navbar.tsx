@@ -3,7 +3,7 @@ import { TbWorldDown } from "react-icons/tb";
 import { IoHome } from "react-icons/io5";
 const Navbat = () => {
   return (
-    <div>
+    <div className="mt-[20px]">
       <div className="w-[60%] mx-auto bg-purple-700 p-[10px] rounded-lg px-[30px]">
         <div className="flex justify-between items-center text-white">
           <div>
