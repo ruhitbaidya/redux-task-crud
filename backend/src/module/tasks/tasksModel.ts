@@ -2,7 +2,11 @@ import { model, Schema } from "mongoose";
 import { TTasks } from "./tanksInterface";
 
 const taskSchema = new Schema<TTasks>({
-  name: {
+  firstnName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
     type: String,
     required: true,
   },
@@ -10,12 +14,9 @@ const taskSchema = new Schema<TTasks>({
     type: String,
     required: true,
   },
-  phone: {
-    type: Number,
-    required: true,
-  },
-  addrese: {
+  profession: {
     type: String,
+    enum : ["student" , "teacher" , "driver" , "business"],
     required: true,
   },
 });

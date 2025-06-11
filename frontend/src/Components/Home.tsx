@@ -11,9 +11,34 @@ const Home = () => {
   return (
     <div>
       <div className="w-[60%] mx-auto mt-[20px]">
-        <div className="flex justify-end items-center">
+        <div className="flex justify-between items-center">
+          <div>
+            <h5 className="font-bold mb-[10px] ml-[10px]">Filter</h5>
+            <button className="bg-purple-700 px-[30px] py-[6px] rounded-lg text-white ml-[5px] cursor-pointer">
+              Student
+            </button>
+            <button className="bg-purple-700 px-[30px] py-[6px] rounded-lg text-white ml-[5px] cursor-pointer">
+              Teacher
+            </button>
+            <button className="bg-purple-700 px-[30px] py-[6px] rounded-lg text-white ml-[5px] cursor-pointer">
+              Driver
+            </button>
+            <button className="bg-purple-700 px-[30px] py-[6px] rounded-lg text-white ml-[5px] cursor-pointer">
+              Business
+            </button>
+            <div className="mt-[20px] relative">
+              <input
+                className="w-full p-[9px] border border-purple-700 outline-none rounded-lg"
+                placeholder="Search"
+                type="text"
+              />
+              <button className="px-[30px] py-[10px] bg-purple-700 rounded-r-lg absolute right-0 text-white">
+                Search
+              </button>
+            </div>
+          </div>
           <Link to="/create-task">
-            <button className="bg-purple-800 flex justify-center items-center gap-[8px] text-white px-[40px] py-[8px] rounded-lg cursor-pointer">
+            <button className="bg-purple-700 flex justify-center items-center gap-[8px] text-white px-[40px] py-[8px] rounded-lg cursor-pointer">
               <FaPlus size={20} />
               <span>Add Task</span>
             </button>

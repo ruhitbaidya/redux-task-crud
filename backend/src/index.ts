@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { tasksModel } from "./tasksModel";
+import { tasksModel } from "./module/tasks/tasksModel";
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
