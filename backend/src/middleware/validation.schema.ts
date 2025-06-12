@@ -8,7 +8,7 @@ export const validationSchema = (schema: AnyZodObject)=>{
         console.log(finds)
         next()
     } catch (err) {
-        res.send(err)
+        next(err)
     }
 }
 }

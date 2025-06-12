@@ -7,8 +7,7 @@ export const globalError = (
   next: NextFunction
 ) => {
   const status = 500;
-  const message = "Internal Servier Error";
-
+  const message = err.message || "Internal Servier Error";
   res.status(status).json({
     success: false,
     message,
