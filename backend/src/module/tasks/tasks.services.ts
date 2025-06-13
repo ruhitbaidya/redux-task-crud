@@ -7,9 +7,12 @@ const createTasks = async (task: TTasks) => {
 };
 
 const readTasks = async (texts: Record<string, unknown>) => {
-  let text: Record<string, unknown> = {};
-  const { cat } = texts;
-  const result = await tasksModel.find({ profession: texts });
+  console.log(texts)
+  // let text: Record<string, unknown> = {};
+  // const { cat } = texts;
+  // const result = await tasksModel.find({ profession: texts });
+  const result = await tasksModel.find();
+  return result
 };
 const updateTask = async (id: string, tasks: Partial<TTasks>) => {
   const result = await tasksModel.findByIdAndUpdate(
@@ -28,4 +31,5 @@ export const taskServices = {
   createTasks,
   updateTask,
   deleteTask,
+  readTasks
 };

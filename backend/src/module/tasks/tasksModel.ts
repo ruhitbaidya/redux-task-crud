@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 import { TTasks } from "./tanksInterface";
 
 const taskSchema = new Schema<TTasks>({
-  firstnName: {
+  firstName: {
     type: String,
     required: true,
   },
